@@ -1,20 +1,195 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{title}}!
-  </h1>
-  <img width="300" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<!--navigation bar scrollspy-->
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <!--navigation bar scrollspy-->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Brien Calloway</a>
+        </div>
+        <div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#footer">Contact Me</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+    <!--Hero Section-->
+<div id="hero" class="jumbotron text-center">
+    <h1 style="color: deepskyblue">Brien Calloway</h1>
+    <img class="img-circle clearfix" src="images/brienMod.jpeg" atl="ProfilePic">
 
+    <div class="container">
+        <p class="text-left">
+            An autodidact. My tenacity, intrinsic motivation, coupled along with my detail oriented 
+            approach to problem solving is a positive contribution to any software development team.</p>
+       <a href="index.html#experience"> <span class="glyphicon glyphicon-menu-down" style="font-size: 2.5em; color: white"></span></a>
+    </div>
+</div>
+    <!--Section 1 Experience-->
+    <div id="experience" class="row ">
+        <div class="col-lg-12 text-center text-center">
+            <span class="glyphicon glyphicon-briefcase" style="font-size: 7.5em; color: deepskyblue"></span>
+            <h1 style="text-align: center">Experience</h1>
+        </div>
+        <div class="col-lg-12">
+            <h2>Washington State Employment Security Department</h2>
+            <h3>2017 - Present</h3>
+            <h4>Lacey, Washington</h4>
+            <p style="padding-right: 50px">
+                Involved in ASP.Net MVC Web application development which required 
+                coding, refactoring, and unit testing skills in a Test-driven Development 
+                Agile environment.
+            </p>
+            <div class="container text-center">
+                <h3>Projects</h3>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div>
+                        Web API
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        Batch Processing Framework 
+                    </div>
+                    <div class="col-sm-3">
+                        ICESA File Generator
+                    </div>
+                    <div class="col-sm-3">
+                        Bulk File Validator
+                    </div>
+                </div>
+        <div class="col-lg-12">
+            <h2>Exertfitness.info</h2>
+            <h3>2003 - Present</h3>
+            <h4>Atlanta, Georgia</h4>
+            <p style="padding-right: 50px">
+                Freelance Software Developer (Owner), March 2004 – Present
+                Developer of www.exertfitnesstraining.com a Drupal 7 e-commerce
+                and fitness training website with social media integration.
+                Developer of an Android fitness tools, image gallery,
+                and music application.
+            </p>
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div>
+                        Java
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        IntelliJ IDE
+                    </div>
+                    <div class="col-sm-3">
+                        E-commerce
+                    </div>
+                    <div class="col-sm-3">
+                        Drupal
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Section 2 Education-->
+    <div id="education">
+        <div class="row">
+        <div class="col-lg-12 text-center">
+            <span class="glyphicon glyphicon-education" style="font-size: 7.5em; color: deepskyblue"></span>
+            <h1 style="text-align: center">Education</h1>
+            <h3>2009 - 2016</h3>
+        </div>
+        </div>
+            <div id="edu1" class="col-sm-6">
+            <h3>University of Phoenix</h3>
+            <p>Graduated 2016</p>
+            <h4>Bachelor's Degree, Software Engineering</h4>
+        </div>
+            <div id="edu2" class="col-sm-6">
+                    <h3>University of Phoenix</h3>
+                    <p>Graduated 2012</p>
+                    <h4>Associate's Degree, Sports Management</h4>
+        </div>
+    </div>
+    <!-- Section 3 Volunteer-->
+    <div id="volunteer">
+    <div class="row">
+    <div class="col-lg-12 text-center">
+            <span class="glyphicon glyphicon-heart" style="font-size: 7.5em; color: deepskyblue;"></span>
+        <h1 style="text-align: center">Volunteer</h1>
+        </div>
+    </div>
+        <div class="row clearfix">
+            <div id="volunteer1" class="col-sm-4">
+                    <h3>3D Printing Presenter</h3>
+                    <h4>Nepris Inc.</h4>
+                    <p>June 2016</p>
+                    <h5>Science and Technology</h5>
+                    <p>
+                        Presented Saddleback Valley Unified High School located in Southern California
+                        a web talk that cover the day to day operation in being a 3D printing specialist.
+                        This lecture went over new innovations, and material used in 3D printing technology
+                        today with a fully interactive web video conference combined and real world examples.
+                    </p>
+                </div>
+            <div id="volunteer2" class="col-sm-4">
+                    <h3>Developer</h3>
+                    <h4>KYC-Chain.com</h4>
+                    <p>July 2016</p>
+                    <h5>Science and Technology</h5>
+                    <p>
+                        Working with a team of developers to build a Ethereum block-chain Decentralized
+                        Autonomous Application. My first project was to create a smart contract and deploying
+                        it into the Ethereum network.
+                    </p>
+                </div>
+            <div id="volunteer3" class="col-sm-4">
+                    <h3>Donation Collector</h3>
+                    <h4>The Packaged Good</h4>
+                    <p>December - January 2016</p>
+                    <h5>Children</h5>
+                    <p>
+                        Setup drop boxes at various locations, support volunteer at The Packaged Good
+                        hosted events, and collect and drop off donations at The Packaged Good distribution center.
+                    </p>
+                </div>
+        </div>
+        <div class="text-center">
+            <a href="home.html#footer"> <span class="glyphicon glyphicon-menu-down" style="font-size:
+            2.5em; color: ghostwhite"></span></a>
+        </div>
+    </div>
+    <!--footer-->
+<div id="footer" class="jumbotron text-center container-fluid">
+    <div class="row">
+        <div class="col-12">
+        <h1>Contact Me <span class="glyphicon glyphicon-comment" ></span></h1>
+
+          <!--  <p> -->
+                <ul>brien@artofmars.org</ul>
+                    <ul><a href="https://twitter.com/intent/tweet?screen_name=brien_calloway"
+                   class="twitter-mention-button" data-show-count="false"></a>
+                    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></ul>
+                <ul><a href="https://www.github.com/SpydaBeast"> <img class="img-circle"
+                                                                     src="images/githubiconMod.jpg">
+                    Head over to my GitHub</a></ul>
+
+           <!-- </p> -->
+        </div>
+</div>
+</div>
