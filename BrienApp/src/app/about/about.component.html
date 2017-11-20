@@ -1,9 +1,48 @@
-<h1>{{pageTitle}}</h1>
-<h2>{{appAuthor}}</h2>
-<p>
-  This Angular application is a coding playground design to 
-  showcase and improve my web development skills. I hope all
-  who visits this app finds it a very enjoyable experience.
-</p>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#"><img src="/assets/images/marsNav.png">Art of Mars</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="app-about">About</a>
+        </li>
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Programs
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Win a scholarship</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Become a partner</a>
+            <a class="dropdown-item" href="#">Pratitioner public registry</a>
+          </div>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Our partners</a>
+        </li>
+        <li class="nav-item dropdown">
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Find a Pratitioner</button>
+      </form>
+    </div>
+  </nav>
 <div>
+  <h1>{{pageTitle}}</h1>
+ 
+  <p>
+     {{apptitle}} (AOM) a is nonprofit organization.
+      Our primary purpose is to provide scholarships to martial arts practitioners.
+  </p>
+  
+  <h1>Our Vision</h1>
+  <h3>{{ourVision}}</h3>
+  We measure our success by giving scholarships to Jiu Jiu practitioners registered with the
+  International Brazilian Jiu Jitsiu Federation (IBJJF), enroll in a accredited public or private
+  university, and three recommendations from Black belt instructor registered with the IBJJF.
 </div>

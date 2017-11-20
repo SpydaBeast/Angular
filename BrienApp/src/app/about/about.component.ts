@@ -11,6 +11,8 @@ export class AboutComponent implements OnInit {
 
   ngOnInit() {}
 
-  pageTitle:string = "Welcome to My digital Profolio"
+  apptitle = "Art of Mars"
+  pageTitle:string = "What is artofmars.org?"
   appAuthor:string = "Brien Calloway"
+  ourVision:string = "To show ways of improving life using ideas, thoughts, and strategy."
 }
