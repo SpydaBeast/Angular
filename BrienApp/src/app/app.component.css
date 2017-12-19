@@ -1,0 +1,49 @@
+body{
+    position: relative;
+    padding-bottom: 25px;
+    background-color: #444650;
+}
+#hero{
+    height: 800px;
+    background-color: #1F2025;
+    color: ghostwhite;
+}
+#experience {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    height: auto;
+    color: ghostwhite;
+}
+#education {
+    padding-top: 50px;
+    padding-bottom: 100px;
+    height: auto;
+    background-color: #66676F;
+    color: ghostwhite;
+}
+#edu1{
+    border-right: solid;
+}
+#edu2{}
+#volunteer {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    height: auto;
+    background-color: #66676F;
+    color: ghostwhite;
+}
+#volunteer1{
+    border-left: solid;
+}
+#volunteer2{
+    border-left: solid;
+}
+#volunteer3{
+      border-left: solid;
+      border-right: solid;
+  }
+#footer {
+    padding-top: 50px;
+    height: auto;
+    color: dimgray;
+}
