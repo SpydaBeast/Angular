@@ -1,2 +1,2 @@
-export interface Ibook {
+export interface IBook {
 }
