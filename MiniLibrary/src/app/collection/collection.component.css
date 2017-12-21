@@ -1,0 +1,12 @@
+.mat-list, .mat-list-item, .mat-list-icon, .mat-nav-list, .mat-list-item, .mat-list-icon{
+  color: #b4bcc2;
+}
+.mat-chip-success {
+  background-color: #18bc9c;
+}
+.mat-chip-danger {
+  background-color: #e74c3c;
+}
+.add-btn {
+  pading: 8px 65px;
+}
