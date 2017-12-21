@@ -19,14 +19,19 @@
 
     <mat-list>
       <mat-card *ngFor="let book of books">
-        <div class="md-3-line">
+        <div class="md-4-line">
           <mat-icon mat-list-icon>book</mat-icon>
           <h3><strong>{{book.title}}</strong></h3>
           <p>{{book.author}}</p>
           <p>{{book.rating}}</p>
+          <p><mat-chip><span [class]="book.isCheckedOut ? 'mat-chip-danger' : 'mat-chip-success'">
+            {{book.isCheckedOut ? 'Checked-Out' : 'Available'}}
+          </span></mat-chip></p>
         </div>
       </mat-card>
     </mat-list>
+
+
 
 </div>
 
