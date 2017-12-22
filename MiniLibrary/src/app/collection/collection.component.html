@@ -23,7 +23,7 @@
           <mat-icon mat-list-icon>book</mat-icon>
           <h3><strong>{{book.title}}</strong></h3>
           <p>{{book.author}}</p>
-          <p>{{book.rating | ratingCategory}}</p>
+          <app-rating [rating]="book.rating" [book]="book"(ratingClicked)="onRatingUpdate($event)"></app-rating>
           <p><mat-chip><span [class]="book.isCheckedOut ? 'mat-chip-danger' : 'mat-chip-success'">
             {{book.isCheckedOut ? 'Checked-Out' : 'Available'}}
           </span></mat-chip></p>

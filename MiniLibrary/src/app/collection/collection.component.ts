@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IBook } from '../ibook';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { DataService } from '../service/data.service';
 
 @Component({
   selector: 'my-collection',
@@ -9,7 +10,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 })
 export class CollectionComponent implements OnInit {
 
-  constructor(private snackBar: MatSnackBarModule) {
+  constructor(private dataService: DataService, private snackBar: MatSnackBarModule) {
     this.startTime = new Date();
     this.startTime.setHours(10, 0);
     this.endTime = new Date();
@@ -17,41 +18,10 @@ export class CollectionComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.books = this.dataService.getBooks();
   }
 
   pageTitle:string = 'Mini Library';
-
-  public books:Array<IBook> =
-    [
-      {
-        id: 1,
-        title: "JavaScript - The Goood Parts",
-        author: "Douglas Crockford",
-        isCheckedOut: true,
-        rating: 3,
-      },
-      {
-        id: 2,
-        title: "The Wind in the Willows",
-        author: "Kenneth Grahame",
-        isCheckedOut: false,
-        rating: 4,
-      },
-      {
-        id: 3,
-        title: "Pillars of the Earth",
-        author: "Ken Follett",
-        isCheckedOut: true,
-        rating: 5,
-      },
-      {
-        id: 4,
-        title: "Harry Potter and the Prisoner of Azkaban",
-        author: "J.K. Rowling",
-        isCheckedOut: false,
-        rating: 3,
-      }
-    ]
 
   startTime:Date;
   endTime:Date;
@@ -60,7 +30,8 @@ export class CollectionComponent implements OnInit {
 
   updateMessage(message: string, type: string): void{
     if (message){
-      this.snackBar.open(`${type}: ${message}`, 'DISMISS', {
+   // this.snackBar.open(`${type}: ${message}`, 'DISMISS', 
+    {
         duration: 3000
       });
     }
