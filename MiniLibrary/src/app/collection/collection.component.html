@@ -10,7 +10,7 @@
 
   <mat-card>
     <mat-card-subtitle><h2><strong>Operating Hours</strong></h2></mat-card-subtitle>
-    <mat-card-subtitle>{{startTime}} - {{endTime}} (Mon - Fri) </mat-card-subtitle>
+    <mat-card-subtitle>{{startTime | date:'shortTime'}} - {{endTime | date: 'shortTime'}} (Mon - Fri) </mat-card-subtitle>
   </mat-card>
 
 </div>
@@ -23,15 +23,13 @@
           <mat-icon mat-list-icon>book</mat-icon>
           <h3><strong>{{book.title}}</strong></h3>
           <p>{{book.author}}</p>
-          <p>{{book.rating}}</p>
+          <p>{{book.rating | ratingCategory}}</p>
           <p><mat-chip><span [class]="book.isCheckedOut ? 'mat-chip-danger' : 'mat-chip-success'">
             {{book.isCheckedOut ? 'Checked-Out' : 'Available'}}
           </span></mat-chip></p>
         </div>
       </mat-card>
     </mat-list>
-
-
-
 </div>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
