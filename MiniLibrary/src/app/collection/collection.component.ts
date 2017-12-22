@@ -30,7 +30,8 @@ export class CollectionComponent implements OnInit {
 
   updateMessage(message: string, type: string): void{
     if (message){
-      this.snackBar.open(`${type}: ${message}`, 'DISMISS', {
+   // this.snackBar.open(`${type}: ${message}`, 'DISMISS', 
+    {
         duration: 3000
       });
     }

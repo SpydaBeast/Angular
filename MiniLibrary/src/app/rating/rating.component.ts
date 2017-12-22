@@ -18,4 +18,12 @@ export class RatingComponent implements OnInit {
   ngOnInit() {
   }
 
+  ngOnChanges(): void {
+  }
+
+  click(rating: number): void {
+    this.book.rating = rating;
+    this.ratingClicked.emit(this.book);
+  }
+
 }
