@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { MatButtonModule, MatCheckboxModule } from '@angular/material';
+import { MatButtonModule, MatCheckboxModule, MatSnackBar } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
@@ -23,7 +23,9 @@ import { RatingComponent } from './rating/rating.component';
     AppComponent,
     AboutComponent,
     CollectionComponent,
-    RatingCategoryPipe,
+    RatingCategoryPipe
+
+,
     RatingComponent
 ],
   imports: [

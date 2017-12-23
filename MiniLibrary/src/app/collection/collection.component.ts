@@ -23,8 +23,6 @@ export class CollectionComponent implements OnInit {
 
   pageTitle:string = 'Mini Library';
 
-  public books: Array<IBook>;
-
   startTime:Date;
   endTime:Date;
 
@@ -32,7 +30,10 @@ export class CollectionComponent implements OnInit {
 
   updateMessage(message: string, type: string): void{
     if (message){
-     // this.snackBar.open(`${type}: ${message}`, 'DISMISS', {duration: 3000});
+   // this.snackBar.open(`${type}: ${message}`, 'DISMISS', 
+    {
+        duration: 3000
+      });
     }
   }
 
