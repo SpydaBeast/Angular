@@ -4,7 +4,6 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { DataService } from '../service/data.service';
 
 @Component({
-  selector: 'my-collection',
   templateUrl: './collection.component.html',
   styleUrls: ['./collection.component.css']
 })
@@ -17,8 +16,8 @@ export class CollectionComponent implements OnInit {
     this.endTime.setHours(15, 0);
   }
 
-  ngOnInit() {
-    this.books = this.dataService.getBooks();
+  ngOnInit(): void {
+    this.getBooks();
   }
 
   pageTitle:string = 'Mini Library';
@@ -29,6 +28,13 @@ export class CollectionComponent implements OnInit {
   endTime:Date;
 
   showOperatingHours: boolean = false;
+
+  getBooks(): void{
+    this.dataService.getBooks()
+      .subscribe(
+        books => this.books = books,
+        error => this.updateMessage(<any>error, 'error'));
+  }
 
   updateMessage(message: string, type: string): void{
     if (message){
