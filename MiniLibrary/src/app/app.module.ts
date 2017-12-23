@@ -9,6 +9,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
@@ -22,8 +23,7 @@ import { RatingComponent } from './rating/rating.component';
     AppComponent,
     AboutComponent,
     CollectionComponent,
-    RatingCategoryPipe
-,
+    RatingCategoryPipe,
     RatingComponent
 ],
   imports: [
@@ -36,7 +36,8 @@ import { RatingComponent } from './rating/rating.component';
     MatListModule,
     MatChipsModule,
     MatIconModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

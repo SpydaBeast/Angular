@@ -7,15 +7,22 @@ import {IBook } from '../ibook';
   templateUrl: './rating.component.html',
   styleUrls: ['./rating.component.css']
 })
-export class RatingComponent implements OnInit {
+export class RatingComponent implements OnInit, OnChanges {
 
   constructor() { }
 
-  @Input() rating:number;
+  @Input() rating: number;
   @Input() book: IBook;
   @Output() ratingClicked: EventEmitter<IBook> = new EventEmitter<IBook>();
 
-  ngOnInit() {
+  ngOnInit(): void{
   }
 
+  ngOnChanges(): void{
+
+  }
+  click(rating:number): void{
+    this.book.rating = rating;
+    this.ratingClicked.emit(this.book);
+  }
 }
