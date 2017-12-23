@@ -22,8 +22,7 @@ import { RatingComponent } from './rating/rating.component';
     AppComponent,
     AboutComponent,
     CollectionComponent,
-    RatingCategoryPipe
-,
+    RatingCategoryPipe,
     RatingComponent
 ],
   imports: [
