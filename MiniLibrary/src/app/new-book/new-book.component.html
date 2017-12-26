@@ -1,0 +1,33 @@
+<form #newBookForm="ngForm">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title><h4>Add New Book</h4></mat-card-title>
+      <img mat-card-avatar src="assets/img/pencil.png"/>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-form-field>
+        <input matInput placeholder="Book Title" [(ngModel)]="book.title"
+        name="title" required />
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Author" [(ngModel)]="book.author"
+               name="author" required />
+      </mat-form-field>
+      <p class="rating-label">Rating</p>
+      <app-rating [rating]="book.rating" [book]="book" (ratingClicked)="onRatingUpdate($event)"></app-rating>
+      <p mat-line>
+        <span [class]="book.isCheckedOut ? 'mat-chip-danger' : 'mat-chip-success'">{{book.isCheckedOut ? 'Checked-Out' : 'Available'}}</span>
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <div class="text-right">
+        <button type="submit" mat-button (click)="save()" color="warn"
+                [disabled]="newBookForm.form.invalid"><i class="material-icons">save</i>SAVE</button>
+      </div>
+      <div class="text-right">
+        <button type="reset" mat-button (click)="save()" color="warn"
+                [disabled]="newBookForm.form.invalid"><i class="material-icons">cancel</i>CANCEL</button>
+      </div>
+    </mat-card-actions>
+  </mat-card>
+</form>

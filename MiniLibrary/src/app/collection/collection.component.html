@@ -22,14 +22,23 @@
         <div class="md-4-line">
           <mat-icon mat-list-icon>book</mat-icon>
           <h3><strong>{{book.title}}</strong></h3>
+          <div>
+            <button mat-button (click)="openDialog(book.id)"><i class="material-icons">
+              pageview</i> Dialog</button>
+            <button mat-button (click)="openRoute(book.id)"><i class="material-icons">
+              pageview</i> Route</button>
+          </div>
           <p>{{book.author}}</p>
-          <app-rating [rating]="book.rating" [book]="book"(ratingClicked)="onRatingUpdate($event)"></app-rating>
+         <app-rating [rating]="book.rating" [book]="book" (ratingClicked)="onRatingUpdate($event)"></app-rating>
           <p><mat-chip><span [class]="book.isCheckedOut ? 'mat-chip-danger' : 'mat-chip-success'">
             {{book.isCheckedOut ? 'Checked-Out' : 'Available'}}
           </span></mat-chip></p>
         </div>
       </mat-card>
     </mat-list>
+  <div class="text-right add-btn">
+    <button mat-raised-button color="primary" (click)="addBook()"><i class="material-icons">add_box</i>ADD BOOK</button>
+  </div>
 </div>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
