@@ -2,17 +2,20 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { MatButtonModule, MatCheckboxModule, MatSnackBar } from '@angular/material';
+import { MatButtonModule, MatCheckboxModule } from '@angular/material';
+import { MatInputModule } from '@angular/material/input';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import {MatSnackBarModule} from '@angular/material/snack-bar';
-import {MatTabsModule} from '@angular/material/tabs';
-import {MatToolbarModule} from '@angular/material/toolbar';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { TabsComponent } from './tabs/tabs.component';
+import { MatDialogModule } from '@angular/material/dialog';
+
 
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
@@ -22,6 +25,8 @@ import { RatingComponent } from './rating/rating.component';
 import { HttpModule } from '@angular/http';
 import { routing } from "./app.routing";
 import { BookDetailComponent } from './book-detail/book-detail.component';
+import { BookGuardService } from "./guards/book-guard.service";
+import { NewBookComponent } from './new-book/new-book.component';
 
 
 @NgModule({
@@ -32,7 +37,8 @@ import { BookDetailComponent } from './book-detail/book-detail.component';
     RatingCategoryPipe,
     RatingComponent,
     TabsComponent,
-    BookDetailComponent
+    BookDetailComponent,
+    NewBookComponent,
 ],
   imports: [
     BrowserModule,
@@ -49,9 +55,12 @@ import { BookDetailComponent } from './book-detail/book-detail.component';
     HttpModule,
     MatTabsModule,
     MatToolbarModule,
-    routing
+    routing,
+    MatDialogModule,
+    MatInputModule,
   ],
-  providers: [],
+  providers: [BookGuardService],
+  entryComponents: [NewBookComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

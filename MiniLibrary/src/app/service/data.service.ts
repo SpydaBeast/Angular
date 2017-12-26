@@ -36,6 +36,16 @@ export class DataService {
       .catch(this.handleError);
   }
 
+  addBook(book: IBook): Observable<IBook[]>{
+    const local:string = localStorage.getItem('books');
+    if (!local) return Observable.throw('Local storage not found.');
+    let localBooks:IBook[] = JSON.parse(local);
+    localBooks.push(book);
+    localStorage.setItem('books', JSON.parse(local));
+    return Observable.create(observer => {observer.next(localBooks);
+    });
+}
+
   updateBook(book: IBook): Observable<IBook[]>{
     const local:string = localStorage.getItem('books');
     if (!local) return Observable.throw('Local storage not found.');
