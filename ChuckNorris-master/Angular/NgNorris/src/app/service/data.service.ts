@@ -16,8 +16,8 @@ getAllJokes(){
  getDevJokes(){
     return this.http.get('https://api.chucknorris.io/jokes/random?category=dev');
  }
- getMoiveJokes(){
-    return this.http.get('https://api.chucknorris.io/jokes/random?category=moive');
+ getMovieJokes(){
+    return this.http.get('https://api.chucknorris.io/jokes/random?category=movie');
  }
  getFoodJokes(){
     return this.http.get('https://api.chucknorris.io/jokes/random?category=food');
