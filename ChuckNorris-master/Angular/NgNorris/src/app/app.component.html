@@ -1,0 +1,127 @@
+<head>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container" style="text-align:center">
+    <h1>
+      Welcome to {{ title }}!
+    </h1>
+    <h2>{{slogan}}</h2>
+  </div>
+  <div class="container">
+    Are you a software developer? Do you think about {{hero}} all the time? Do you want to develop an application in Angular
+    so you and your freinds and family can have be up-to-date for all the most awesome {{hero}} jokes from https://api.chucknorris.io.
+  </div>
+  <div class="container">Well...</div>
+  <div class="container">You've came to the right place!</div>
+</body>
+<div class="container">
+  <div class="card">
+    <div class="card title">
+      <h1>Random Jokes</h1>
+    </div>
+    <div class="card body">
+        <app-jokes></app-jokes>
+    </div>
+  </div>
+</div>
+<div>
+  <div class="container">
+    <h1>Categories </h1>
+    <ngb-accordion #acc="ngbAccordion">
+      <ngb-panel title="Explicit">
+        <ng-template ngbPanelContent>
+          <div>
+              <app-explicit></app-explicit>
+          </div>
+        </ng-template>
+      </ngb-panel>
+      <ngb-panel title="Dev">
+        <ng-template ngbPanelContent>
+          <div>
+            <app-dev></app-dev>
+          </div>
+        </ng-template>
+      </ngb-panel>
+      <ngb-panel title="Food">
+        <ng-template ngbPanelContent>
+          <app-food></app-food>
+        </ng-template>
+      </ngb-panel>
+      <ngb-panel title="Celebrity">
+        <ng-template ngbPanelContent>
+          <app-celebrity></app-celebrity>
+        </ng-template>
+      </ngb-panel>
+      <ngb-panel title="Science">
+        <ng-template ngbPanelContent>
+          <app-science></app-science>
+        </ng-template>
+      </ngb-panel>
+      <ngb-panel title="Sports">
+        <ng-template ngbPanelContent>
+          <app-sports></app-sports>
+        </ng-template>
+      </ngb-panel>
+      <ngb-panel title="Political">
+        <ng-template ngbPanelContent>
+          Place Holder for client HTTP call
+        </ng-template>
+      </ngb-panel>
+      <ngb-panel title="Religion">
+        <ng-template ngbPanelContent>
+          Place Holder for client HTTP call
+        </ng-template>
+      </ngb-panel>
+      <ngb-panel title="Animal">
+        <ng-template ngbPanelContent>
+          Place Holder for client HTTP call
+        </ng-template>
+      </ngb-panel>
+      <ngb-panel title="History">
+        <ng-template ngbPanelContent>
+          Place Holder for client HTTP call
+        </ng-template>
+      </ngb-panel>
+      <ngb-panel title="Music">
+        <ng-template ngbPanelContent>
+          Place Holder for client HTTP call
+        </ng-template>
+      </ngb-panel>
+      <ngb-panel title="Travel">
+        <ng-template ngbPanelContent>
+          Place Holder for client HTTP call
+        </ng-template>
+      </ngb-panel>
+      <ngb-panel title="Career">
+        <ng-template ngbPanelContent>
+          Place Holder for client HTTP call
+        </ng-template>
+      </ngb-panel>
+      <ngb-panel title="Money">
+        <ng-template ngbPanelContent>
+          Place Holder for client HTTP call
+        </ng-template>
+      </ngb-panel>
+      <ngb-panel title="Fashion">
+        <ng-template ngbPanelContent>
+          Place Holder for client HTTP call
+        </ng-template>
+      </ngb-panel>
+    </ngb-accordion>
+  </div>
+  <div style="text-align:center">
+    <i class="fab fa-angular fa-3x"></i>Created w/Angular
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+  crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+  crossorigin="anonymous"></script>
